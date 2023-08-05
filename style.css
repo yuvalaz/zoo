@@ -1,0 +1,104 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+#gridDiv{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 12.5% 87.5%;
+    grid-template-rows: 20% 80% 10%;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+#header{
+    grid-area: header;
+    background-color: rgb(142, 14, 14);
+    display: flex;
+    justify-content: space-around;
+}
+#sidebar{
+    grid-area: sidebar;
+    background-color: rgb(209, 189, 158);
+    display: flex;
+    flex-direction: column-reverse ;
+    justify-content: space-between;
+
+}
+
+#main{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+.animals{
+    width: 20vw;
+    height: 50vh;
+    margin: 5%;
+    box-shadow: 10px 10px 30px;
+
+}
+
+.picture{
+    width: 100%;
+    height: 80%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #gridDiv{
+        grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+    }
+    #sidebar{
+        display: none;
+    }
+    .animals{
+        width: 80vw;
+        height: 80vh;
+       margin: 10%;
+    }
+    
+}
+#animal1:hover{
+    filter: blur(2px);
+
+}
+#animal2:hover{
+    filter: grayscale(100);
+    
+}
+#animal3:hover{
+    filter: opacity(0.5);
+    
+}
+#animal4:hover{
+    filter: brightness(50%);
+}
+#animal5:hover{
+    filter: contrast(50%);
+}
+#animal6:hover{
+    filter: drop-shadow(5px 5px 20px #0f0);
+}
+#animal7:hover{
+    filter: sepia(20);
+}
+#footer{
+    grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    display: flex;
+    justify-content: center
+}
+#pfooter{
+    color: white;
+   
+}
